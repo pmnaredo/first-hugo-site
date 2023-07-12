@@ -1,0 +1,47 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'My First Hugo Site'
+theme = "mainroad"
+paginate = "10"
+
+[Author] # Used in authorbox
+  name = "John Doe"
+  bio = "John Doe's true identity is unknown. Maybe he is a successful blogger or writer. Nobody knows it."
+  avatar = "img/avatar.png"
+
+[Params]
+  description = "John Doe's Personal blog about everything" # Site description. Used in meta description
+  copyright = "John Doe" # Footer copyright holder, otherwise will use site title
+  readmore = true # Show "Read more" button in list if true
+  authorbox = true # Show authorbox at bottom of pages if true
+  pager = true
+  post_meta = ["date", "categories", "author"] # Order of post meta information
+  #mainSections = ["post", "docs"]
+
+[Params.sidebar]
+  home = "right"
+  list = "right"
+  single = false
+  # Enable widgets in given order
+  widgets = ["search", "recent", "categories", "taglist", "social", "languages"]
+
+
+[Params.widgets]
+  recent_num = 5 # Set the number of articles in the "Recent articles" widget
+  categories_counter = true # Enable counter for each category in "Categories" widget
+  tags_counter = false # Enable counter for each tag in "Tags" widget
+
+[menu]
+[[menu.main]]
+  name = 'Home'
+  pageRef = '/'
+  weight = 10
+[[menu.main]]
+  name = 'Blog'
+  pageRef = '/blog'
+  weight = 20
+[[menu.main]]
+  name = 'Section'
+  pageRef = '/section'
+  weight = 30
+
